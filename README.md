@@ -1,5 +1,5 @@
 **Project: Urban Spice Restaurant Website**
-
+Deployed Link - https://gkdey17cse.github.io/UrbanSpice/index.html
 Welcome to the "Urban Spice" restaurant website project. This classic and visually captivating website reflects a fusion of aesthetics and modern web development. As a web developer, I crafted an online culinary haven that seamlessly integrates features like form validation, interactive animations with Wow.js, captivating image carousels with Owl.Carousels, and engaging transitions with Animate.css.
 
 Key Features:
