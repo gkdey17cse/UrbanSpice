@@ -4,11 +4,12 @@ Welcome to the "Urban Spice" restaurant website project. This classic and visual
 
 Key Features:
 
-Immersive Experience: Dive into a visually engaging culinary world, right from your screen.
-Form Validation: Ensure user data accuracy with robust form validation techniques.
-Interactive Animations: Enhance user engagement with captivating Wow.js animations.
-Image Carousels: Showcase restaurant offerings with stunning Owl.Carousels image galleries.
-Engaging Transitions: Create a captivating experience with Animate.css transitions.
-User Experience: Prioritize user-friendly design and an intuitive interface.
-Explore the menus, make reservations, and savor the essence of Urban Spice's exquisite offerings, all within this digital culinary haven.
-
+Utilized HTML to structure and create web pages, ensuring a user-friendly interface.
+Employed Tailwind CSS to implement a visually appealing and responsive design, enhancing the website's aesthetics.
+Implemented JavaScript and jQuery to add dynamic and interactive elements, improving user engagement.
+Incorporated form validation techniques to enhance user experience when submitting information.
+Integrated Owl Carousels for showcasing visually captivating image slideshows and content.
+Leveraged Wow.js to add scroll animations, creating an engaging and visually pleasing experience.
+Utilized Animate.css to apply captivating animations that draw attention to key website elements.
+Designed a classic website that combines elegant aesthetics with modern functionalities.
+Ensured the website's responsiveness, making it accessible and enjoyable on various devices.
