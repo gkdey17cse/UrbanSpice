@@ -21,10 +21,12 @@
   <link rel="stylesheet" href="CSS/animate.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-  <!-- Owl Caraousel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <!--Flowbite -->
+  <script src="https://unpkg.com/flowbite@2.3.0/dist/flowbite.min.js"></script>
+  <!-- Date & Time Picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/themes/airbnb.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 
 
@@ -90,28 +92,8 @@
   </div>
   <!-- Banner End -->
 
-  <!-- Online Order -->
-  <div class="container mx-auto mb-12 px-2 py-2" style="font-family:'Urbanist', sans-serif; ;">
-    <div class="lg:flex justify-center items-center gap-2 text-center tracking-widest font-semibold leading-loose">
-      <div class="flex justify-center items-center ">
-        <img src="/assets/Image/OnlineDeliver.jpg" alt="">
-      </div>
-      <div class="flex flex-col gap-6 justify-center items-center">
-        <h3 class="text-lg md:text-xl xl:text-2xl">
-          Enjoy the flavors of 'Urban Spice' from the comfort of your home. We deliver culinary excellence to
-          your doorstep!
-        </h3>
-        <h1 class="text-lg md:text-xl xl:text-2xl ">Call : <br><br>
-          <span class="text-2xl lg:text-4xl font-bold">(+91) 1800 365 1369 8745</span>
-        </h1>
-      </div>
-    </div>
-  </div>
-  <!-- Online Order -->
-
-
   <!-- heading Our Menu -->
-  <div class="container mx-auto my-2 py-2 ">
+  <div class="container mx-auto  ">
     <!-- Heading -->
     <div class="flex items-center h-auto wow bounceInUp" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
       <hr class="flex-grow border-t border-orange-400">
@@ -134,8 +116,8 @@
 
     <!-- Items Section All -->
     <% for (let category in menus) { %>
-    <div class="px-2 py-1.5 my-4 border shadow-md">
-      <div class="flex justify-between items-center text-3xl font-semibold tracking-wider px-2 py-2 text-transparent 
+    <div class="px-2 py-1.5 my-2 border shadow-md">
+      <div class="flex justify-between items-center text-3xl font-semibold tracking-wider px-2.5 py-1 text-transparent 
     bg-clip-text bg-gradient-to-b from-orange-500 via-amber-600 to-orange-500">
         <h2 class="font-bold text-3xl"><%= category.charAt(0).toUpperCase() + category.slice(1) %>
           <span class="text-sm font-medium bg-white text-gray-700">(Click to add <%= category %>)</span>
@@ -148,21 +130,21 @@
       </div>
 
       <!-- Items -->
-      <div id="category-<%= category %>" class="p-1 my-2">
+      <div id="category-<%= category %>" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out p-1 my-2">
         <div class="w-full px-2 py-3" style="font-family: 'Poppins', cursive;">
-          <div class="grid grid-cols-8 gap-2">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-8 gap-2">
             <% menus[category].forEach(item => { 
              const safeId = (category + '_' + item.name).replace(/\s+/g, '_').replace(/[^\w]/g, '').toLowerCase(); 
         %>
             <div class="item">
               <div class="flex justify-center items-center flex-col gap-2 p-2.5 shadow-lg h-[400px]">
-                <div class="flex flex-col justify-center items-center h-40">
-                  <img src="<%= item.image %>" alt="" class="h-full object-contain">
+                <div class="flex flex-col justify-center items-center h-40 overflow-hidden rounded-full">
+                  <img src="<%= item.image %>" alt="" class="h-full object-contain scale-105 hover:scale-110 duration-300 rounded-bl-full">
                 </div>
 
-                <div class="flex justify-start items-start flex-col gap-2 p-2.5 font-medium tracking-wider text-justify flex-grow w-full overflow-hidden">
-                  <h2 class="text-lg font-bold leading-tight"><%= item.name %></h2>
-                  <p class="text-sm leading-snug line-clamp-6 overflow-hidden"><%= item.desc %></p>
+                <div class="flex justify-start items-start flex-col gap-2 p-0.5 font-medium tracking-wider text-justify flex-grow w-full overflow-hidden">
+                  <h2 class="font-bold leading-tight"><%= item.name %></h2>
+                  <p class="text-xs xl:text-sm leading-snug line-clamp-4 xl:line-clamp-6 overflow-hidden"><%= item.desc %></p>
                 </div>
 
                 <div class="w-full flex justify-between items-center px-2">
@@ -187,138 +169,180 @@
   <!-- Select Product Section End -->
 
 
-  <!-- heading Our Menu -->
-  <div class="container mx-auto my-2 mt-12 py-2 ">
-    <!-- Heading -->
-    <div class="flex items-center h-auto wow bounceInUp" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
-      <span class="px-3 py-8 text-transparent bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
-                text-3xl lg:text-5xl font-semibold">
-        Delivery Details
-      </span>
-      <hr class="flex-grow border-t border-orange-400">
-    </div>
-    <!-- Heading -->
-  </div>
-  <!-- heading Our Menu -->
-
 
 
   <!-- Details Form -->
-  <form id="formValidation" name="formValidation" method="get" class="container mx-auto text-sm md:text-base lg:text-lg xl:text-xl px-4 py-6 my-4 bg-gradient-to-b from-gray-100 via-slate-100 to-gray-100 shadow-md">
+  <form id="formValidation" name="formValidation" method="get" class="hidden container mx-auto text-sm xl:text-base px-4 py-6 my-4 mx-auto bg-gradient-to-b from-gray-50 via-slate-50 to-gray-50">
 
-    <div class="container mx-auto my-4 py-2 px-4 flex flex-col md:flex-row justify-between items-start gap-10 text-gray-900" style="font-family: 'calibri', cursive;">
+    <!-- heading Our Menu -->
+    <div class="container mx-auto my-2 mt-12 py-2 ">
+      <!-- Heading -->
+      <div class="flex items-center h-auto wow bounceInUp" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
+        <span class="px-3 py-8 text-transparent bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
+                text-3xl lg:text-5xl font-semibold">
+          Delivery Details
+        </span>
+        <hr class="flex-grow border-t border-orange-400">
+      </div>
+      <!-- Heading -->
+    </div>
+    <!-- heading Our Menu -->
 
-      <!-- Itemized Bill -->
-      <div class="w-full md:w-2/3">
-        <h2 class="text-lg font-bold mb-2 text-orange-500">Your Bill Summary</h2>
-        <div id="bill-summary" class="text-base font-medium tracking-wide space-y-1">
-          <!-- Dynamically injected items -->
+    <div class="grid grid-cols-6">
+      <div class="col-span-3 container mx-auto my-6 p-4 text-gray-900 tracking-widest">
+        <!-- Title -->
+        <h2 class="p-2 xl:text-2xl font-bold mb-4 text-orange-600 tracking-wide">Your Bill Summary</h2>
+
+        <!-- Itemized Bill Table -->
+        <div class="overflow-x-auto shadow border border-gray-200 rounded-lg">
+          <table class="min-w-full divide-y divide-gray-200 text-sm text-left bg-white">
+            <thead class="bg-orange-100 text-gray-700 uppercase tracking-wider">
+              <tr>
+                <th class="px-4 py-3">Item</th>
+                <th class="px-4 py-3 text-center">Quantity</th>
+                <th class="px-4 py-3 text-center">Unit Price (₹)</th>
+                <th class="px-4 py-3 text-right">Total (₹)</th>
+              </tr>
+            </thead>
+            <tbody id="bill-summary" class="divide-y divide-gray-100 font-medium text-gray-800">
+              <!-- Dynamic rows injected by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Totals Section -->
+        <div class="mt-6 w-full md:w-1/2 lg:w-1/3 ml-auto text-base">
+          <div class="flex justify-between items-center py-2 border-b border-gray-200">
+            <span class="text-gray-600 font-medium">Subtotal:</span>
+            <span id="subtotal" class="font-semibold text-gray-900">0 ₹</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-200">
+            <span class="text-gray-600 font-medium">GST (5%):</span>
+            <span id="gst" class="font-semibold text-gray-900">0 ₹</span>
+          </div>
+          <div class="flex justify-between items-center py-3 text-lg font-semibold text-orange-600">
+            <span>Total:</span>
+            <span id="total">0 ₹</span>
+          </div>
         </div>
       </div>
 
-      <!-- Totals -->
-      <div class="w-full md:w-1/3 flex flex-col gap-2">
-        <h2 class="text-base md:text-lg lg:text-xl font-medium text-gray-600 tracking-wider">Sub Total : <span id="subtotal">0 ₹</span></h2>
-        <h2 class="text-base md:text-lg lg:text-xl font-medium text-gray-600 tracking-wider">GST (5%) : <span id="gst">0 ₹</span></h2>
-        <h2 class="text-base md:text-lg lg:text-xl font-semibold tracking-wider">Total : <span id="total">0 ₹</span></h2>
-      </div>
-    </div>
+      <!--Form Section -->
+      <div class="col-span-3 my-6 px-4">
+        <h2 class="p-2 xl:text-2xl font-bold mb-4 text-orange-600 tracking-wide">Customer Details</h2>
 
-
-    <!-- Customer Name -->
-    <div class="px-4 py-1 mb-6">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Customer Name <span class="text-red-500 text-sm">*</span></h2>
-      <div class="my-2 py-2 gap-5">
-        <input name="name" id="name" type="text" placeholder="Customer First Name" class="rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-      </div>
-    </div>
-    <!-- Customer Name End -->
-
-    <!-- Mobile Numberr -->
-    <div class="px-4 py-1 mb-6">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Mobile Number <span class="text-red-500 text-sm">*</span></h2>
-      <div class="mt-2.5 gap-5">
-        <input name="phone" id="phone" type="text" placeholder="Customer Contact No. (Ex - 1234567890)" class="rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-      </div>
-    </div>
-    <!-- Mobile Numberr -->
-
-
-    <!-- Email Address -->
-    <div class="px-4 py-1 mb-6">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Email Address <span class="text-red-500 text-sm">*</span></h2>
-      <div class="mt-2.5 gap-5">
-        <input name="email" id="email" type="email" placeholder="Customer Email Address (Ex - abc@xyz.com)" class="rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-      </div>
-    </div>
-    <!-- Email Address -->
-
-
-    <!-- Delivery Address Details -->
-    <div class="px-4 py-1 mb-6">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Delivery Address Details <span class="text-red-500 text-sm">*</span></h2>
-      <input name="address1" id="adress1" type="text" placeholder="House No / Flat No / Block No (Ex - 98/45 Shakespear Sarani)" class="mt-2.5 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-      <input name="address2" id="address2" type="text" placeholder="Town / City (Ex - Nagerbazar , Kolkata)" class="mt-5 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-      <div class="flex justify-between items-center mt-5 gap-5">
-        <input name="pincode" id="pincode" type="text" placeholder="Pincode (Ex - 743322)" class="rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-        <input id="state" type="text" placeholder="State (Ex - West Bengal)" class="rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-      </div>
-      <input id="landmark" type="text" placeholder="Landmark (Ex - Right side second house , Beside Netaji Sangha club)" class="mt-5 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
-    </div>
-    <!-- Delivery Address Details -->
-
-    <!-- Delivery Date & Time  Details -->
-    <div class="px-4 py-1 mb-6">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Delivery Date & Time</h2>
-      <div class="mt-3.5">
-        <!-- component -->
-        <div x-data x-init="flatpickr($refs.datetimewidget, {wrap: true, enableTime: true, dateFormat: 'M j, Y h:i K'});" x-ref="datetimewidget" class="flatpickr container mx-auto col-span-6 sm:col-span-6 mt-5">
-          <label for="datetime" class="flex-grow  block font-medium text-sm text-gray-700 mb-1">Date and
-            Time</label>
-          <input x-ref="datetime" type="text" name="datetime" id="datetime" data-input placeholder="Select Date & Time for Delivery" class="block w-full px-3 py-2.5 border border-orange-500 focus:border-border-500 rounded-lg shadow-sm">
+        <!-- Customer Name -->
+        <div class="px-4 py-1 mb-2">
+          <h2 class="">Customer Name <span class="text-red-500 text-sm">*</span></h2>
+          <div class="py-2 text-red-500 ">
+            <input name="name" id="name" type="text" placeholder="Customer First Name" class="text-zinc-600 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- Delivery Date & Time Details -->
+        <!-- Customer Name End -->
 
-    <!-- Customer Details -->
-    <div class="px-4 py-1 mb-8">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Payment Mode</h2>
-      <div class="grid grid-cols-3 pt-3.5">
-        <div class="flex items-center justify-start mb-4">
-          <input checked id="cod" type="radio" value="cod" name="default-radio" class="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300">
-          <label for="default-radio-1" class="ml-2 text-sm md:text-base lg:text-lg xl:text-xl font-medium text-gray-900">Cash on
-            Delivery</label>
+        <!-- Mobile Numberr -->
+        <div class="px-4 py-1 mb-2">
+          <h2 class="">Mobile Number <span class="text-red-500 text-sm">*</span></h2>
+          <div class="py-2 text-red-500">
+            <input name="phone" id="phone" type="text" placeholder="Customer Contact No. (Ex - 1234567890)" class="text-zinc-600 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+          </div>
         </div>
-        <div class="flex items-center justify-start">
-          <input id="card" type="radio" value="card" name="default-radio" class="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300">
-          <label for="default-radio-2" class="ml-2 text-sm md:text-base lg:text-lg xl:text-xl font-medium text-gray-900">Card</label>
-        </div>
-        <div class="flex items-center justify-start">
-          <input id="upi" type="radio" value="upi" name="default-radio" class="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300">
-          <label for="default-radio-2" class="ml-2 text-sm md:text-base lg:text-lg xl:text-xl font-medium text-gray-900">UPI</label>
-        </div>
-      </div>
-    </div>
-    <!-- Customer Details End -->
+        <!-- Mobile Numberr -->
 
-    <!-- Other Instruction -->
-    <div class="px-4 py-1 mb-12">
-      <h2 class="text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-wide">Instructions</h2>
-      <div class="w-auto mt-2.5">
-        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm md:text-base lg:text-lg xl:text-xl text-gray-900 bg-gray-50 rounded-lg border border-orange-500 focus:ring-blue-500 focus:border-blue-500" placeholder="Any Special Instructions"></textarea>
-      </div>
-    </div>
-    <!-- Other Instruction End -->
 
-    <!-- Button -->
-    <div class="flex justify-center items-center my-8 px-2 py-3">
+        <!-- Email Address -->
+        <div class="px-4 py-1 mb-2">
+          <h2 class="">Email Address <span class="text-red-500 text-sm">*</span></h2>
+          <div class="mt-2.5 gap-5 text-red-500">
+            <input name="email" id="email" type="email" placeholder="Customer Email Address (Ex - abc@xyz.com)" class="text-zinc-600 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+          </div>
+        </div>
+        <!-- Email Address -->
+
+
+        <!-- Delivery Address Details -->
+        <div class="px-4 py-1 mb-2 text-red-500 ">
+          <h2 class="text-zinc-600">Delivery Address Details <span class="text-red-500 text-sm">*</span></h2>
+          <input name="address1" id="adress1" type="text" placeholder="House No / Flat No / Block No (Ex - 98/45 Shakespear Sarani)" class="text-zinc-600 mt-2.5 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+          <input name="address2" id="address2" type="text" placeholder="Town / City (Ex - Nagerbazar , Kolkata)" class="text-zinc-600 mt-5 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+          <div class="flex justify-between items-center mt-5 gap-5">
+            <input name="pincode" id="pincode" type="text" placeholder="Pincode (Ex - 743322)" class="text-zinc-600 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+            <input id="state" type="text" placeholder="State (Ex - West Bengal)" class="text-zinc-600 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+          </div>
+          <input id="landmark" type="text" placeholder="Landmark (Ex - Right side second house , Beside Netaji Sangha club)" class="text-zinc-600 mt-5 rounded-md shadow-lg w-full border border-orange-500 py-2.5 px-4 focus:border focus:border-orange-500">
+        </div>
+        <!-- Delivery Address Details -->
+
+        <!-- Time Schedule-->
+        <!-- Delivery Scheduling Section -->
+        <div x-data="{ isScheduled: false }" class="px-4 py-2 my-3 ">
+
+          <!-- Schedule Toggle -->
+          <div class="mb-3">
+            <label class="inline-flex items-center">
+              <input type="checkbox" @change="isScheduled = !isScheduled" class="form-checkbox text-orange-600 rounded">
+              <span class="ml-2 font-medium text-gray-700">Schedule Delivery</span>
+            </label>
+          </div>
+
+          <!-- Delivery Date & Time Section (visible only if scheduled) -->
+          <div x-show="isScheduled" x-transition class="transition-all duration-300 ease-in-out">
+            <h2 class="text-gray-700">Delivery Date & Time</h2>
+
+            <div class="mt-3.5">
+              <!-- Only change is here (minDate: "today") -->
+              <div x-data x-init="flatpickr($refs.datetimewidget, { 
+                    wrap: true, 
+                    enableTime: true, 
+                    dateFormat: 'M j, Y h:i K', 
+                    minDate: 'today' 
+                  });" x-ref="datetimewidget" class="flatpickr container mt-2">
+
+                <input x-ref="datetime" type="text" name="datetime" id="datetime" data-input placeholder="Select Date & Time for Delivery" class="block w-full px-3 py-2.5 border border-orange-500 focus:border-orange-600 rounded-lg shadow-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Details -->
+        <div class="px-4 py-1 mb-8">
+          <h2 class="">Payment Mode</h2>
+          <div class="grid grid-cols-3 pt-3.5">
+            <div class="flex items-center justify-start mb-4">
+              <input checked id="cod" type="radio" value="cod" name="default-radio" class="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300">
+              <label for="default-radio-1" class="ml-2 text-gray-900">Cash on
+                Delivery</label>
+            </div>
+            <div class="flex items-center justify-start">
+              <input id="card" type="radio" value="card" name="default-radio" class="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300">
+              <label for="default-radio-2" class="ml-2 text-gray-900">Online</label>
+            </div>
+          </div>
+        </div>
+        <!-- Customer Details End -->
+
+        <!-- Other Instruction -->
+        <div class="px-4 py-1 mb-12">
+          <h2>Instructions</h2>
+          <div class="w-auto mt-2.5">
+            <textarea id="message" rows="4" class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-orange-500 focus:ring-blue-500 focus:border-blue-500" placeholder="Any Special Instructions"></textarea>
+          </div>
+        </div>
+        <!-- Other Instruction End -->
+
+
+      </div>
+      <!--Form End -->
+    </div>
+
+    <!-- Submit Button -->
+    <div class="w-full flex justify-center items-center px-2 py-3">
       <button type="submit" class="px-4 py-2.5 w-1/2 text-base lg:text-lg text-white font-semibold tracking-widest bg-gradient-to-r from-orange-400 via-amber-500 to-orange-500 
-                active:translate-x-2 active:translate-y-2 duration-300">Confirm Order</button>
+                active:translate-x-2 active:translate-y-2 duration-300">Confirm Order
+      </button>
     </div>
   </form>
   <!-- Details Form End -->
-
 
 
   <!-- Footer -->
@@ -336,8 +360,6 @@
                 Now</span></a>
             <a href="/about" class="hover:tracking-wider duration-150">&rArr; &nbsp;
               <span>About</span></a>
-            <a href="/testimonials" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Customer
-                Feedback</span></a>
             <a href="/bookatable" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Reserve A
                 Table</span></a>
             <a href="/faqs" class="hover:tracking-wider duration-150">&rArr; &nbsp;
@@ -413,9 +435,9 @@
           </h3>
           <div class="flex flex-col justify-center items-start gap-2 text-white py-3 text-xs md:text-base xl:text-xl" style="font-family: 'Urbanist', sans-serif;">
             <div class="tracking-wider">
-              <p class="py-1 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus fuga rerum
-                expedita deleniti consequuntur delectus?</p>
+              <p class="py-1">
+                Subscribe to our newsletter to receive exclusive updates, special offers, and the latest news from Urban Spice directly in your inbox.
+              </p>
             </div>
           </div>
         </div>
@@ -439,7 +461,6 @@
   <script>
     new WOW().init();
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Flowbite -->
   <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 
@@ -509,82 +530,56 @@
   </script>
 
   <script>
-    var owl = $('.owl-carousel');
-    owl.owlCarousel({
-      items: 4,
-      loop: true,
-      margin: 10,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      autoplayHoverPause: true,
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        640: {
-          items: 2,
-        },
-        1280: {
-          items: 4,
-        }
-      }
-    });
-
-    $('.play').on('click', function() {
-      owl.trigger('play.owl.autoplay', [1000])
-    })
-    $('.stop').on('click', function() {
-      owl.trigger('stop.owl.autoplay')
-    })
-  </script>
-
-  <script>
     function toggleCategory(category) {
-      const target = document.getElementById(`category-${category}`);
+      const section = document.getElementById(`category-${category}`);
       const arrow = document.getElementById(`arrow-${category}`);
 
-      const allSections = document.querySelectorAll('[id^="category-"]');
-      const allArrows = document.querySelectorAll('[id^="arrow-"]');
+      const isOpen = section.classList.contains('max-h-[4000px]');
 
-      const isOpen = target.style.display === 'block';
+      // Collapse all sections
+      document.querySelectorAll('[id^="category-"]').forEach(sec => {
+        sec.classList.remove('max-h-[4000px]');
+        sec.classList.add('max-h-0');
+      });
 
-      // Close all other sections and reset arrows
-      allSections.forEach(section => section.style.display = 'none');
-      allArrows.forEach(svg => svg.classList.remove('rotate-0'));
-      allArrows.forEach(svg => svg.classList.add('rotate-180'));
+      // Reset all arrows
+      document.querySelectorAll('[id^="arrow-"]').forEach(arw => {
+        arw.classList.remove('rotate-0');
+        arw.classList.add('rotate-180');
+      });
 
+      // If previously closed, open it
       if (!isOpen) {
-        target.style.display = 'block';
+        section.classList.remove('max-h-0');
+        section.classList.add('max-h-[4000px]');
         arrow.classList.remove('rotate-180');
         arrow.classList.add('rotate-0');
-      } else {
-        target.style.display = 'none';
-        arrow.classList.remove('rotate-0');
-        arrow.classList.add('rotate-180');
       }
     }
 
-    // On initial load — open biriyani only
     window.onload = function() {
-      const allSections = document.querySelectorAll('[id^="category-"]');
-      const allArrows = document.querySelectorAll('[id^="arrow-"]');
-
-      allSections.forEach(section => {
-        section.style.display = section.id === 'category-biriyani' ? 'block' : 'none';
-      });
-
-      allArrows.forEach(svg => {
-        if (svg.id === 'arrow-biriyani') {
-          svg.classList.remove('rotate-180');
-          svg.classList.add('rotate-0');
+      document.querySelectorAll('[id^="category-"]').forEach(sec => {
+        if (sec.id === 'category-biriyani') {
+          sec.classList.remove('max-h-0');
+          sec.classList.add('max-h-[4000px]');
         } else {
-          svg.classList.remove('rotate-0');
-          svg.classList.add('rotate-180');
+          sec.classList.remove('max-h-[4000px]');
+          sec.classList.add('max-h-0');
         }
       });
-    }
+
+      document.querySelectorAll('[id^="arrow-"]').forEach(arw => {
+        if (arw.id === 'arrow-biriyani') {
+          arw.classList.remove('rotate-180');
+          arw.classList.add('rotate-0');
+        } else {
+          arw.classList.remove('rotate-0');
+          arw.classList.add('rotate-180');
+        }
+      });
+    };
   </script>
+
 
   <script>
     const cart = {};
@@ -622,19 +617,35 @@
     });
 
     function updateBillDisplay() {
+      const billsummary = document.getElementById('formValidation');
       let subtotal = 0;
-      billSummary.innerHTML = '';
+      billSummary.innerHTML = ''; // Clear table body
 
-      Object.entries(cart).forEach(([name, {
+      // Check if there are any items in the cart
+      const cartEntries = Object.entries(cart);
+
+      if (cartEntries.length === 0) {
+        billsummary.classList.add('hidden');
+        return;
+      } else {
+        billsummary.classList.remove('hidden');
+      }
+
+      cartEntries.forEach(([name, {
         price,
         quantity
       }]) => {
         const itemTotal = price * quantity;
         subtotal += itemTotal;
 
-        const itemLine = document.createElement('p');
-        itemLine.textContent = `${name} - ₹${price} × ${quantity} = ₹${itemTotal}`;
-        billSummary.appendChild(itemLine);
+        const row = document.createElement('tr');
+        row.innerHTML = `
+      <td class="px-4 py-2">${name}</td>
+      <td class="px-4 py-2 text-center">${quantity}</td>
+      <td class="px-4 py-2 text-center">${price.toFixed(2)}</td>
+      <td class="px-4 py-2 text-right">${itemTotal.toFixed(2)}</td>
+    `;
+        billSummary.appendChild(row);
       });
 
       const gst = subtotal * 0.05;
@@ -645,6 +656,7 @@
       totalField.textContent = `${total.toFixed(2)} ₹`;
     }
   </script>
+
 
 
 </body>

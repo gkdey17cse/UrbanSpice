@@ -6,6 +6,9 @@ const menuIndex = require('./public/js/menuIndex');
 const testimonials = require('./public/js/testimonials')
 const menuHero = require('./public/js/menuHero')
 const menuAll = require('./public/js/menuComplete')
+const chefDetails = require('./public/js/chefsDetails')
+const faqs = require('./public/js/faqs')
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', { about: about, chefs: chefDetails });
 });
 
 app.get('/menu', (req, res) => {
@@ -35,19 +38,23 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/ordernow', (req, res) => {
-    res.render('ordernow' , {menus:menuAll});
+    res.render('ordernow', { menus: menuAll });
 });
 
 app.get('/bookatable', (req, res) => {
-    res.render('bookatable');
+    res.render('booktable');
 });
 
 app.get('/faqs', (req, res) => {
-    res.render('faqs');
+    res.render('faqs', { faqs: faqs });
 });
 
 app.get('/testimonials', (req, res) => {
     res.render('testimonials');
+});
+
+app.get('/pnf', (req, res) => {
+    res.render('pagenotfound');
 });
 
 // 404 handler

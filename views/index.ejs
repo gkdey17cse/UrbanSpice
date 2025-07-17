@@ -29,73 +29,56 @@
 
 <body class="bg-white">
 
-    <!-- Navigation Bar -->
-    <header class="bg-gray-900 body-font sticky z-40 tracking-wider px-2 py-1 lg:py-2"
-        style="top: 0%; font-family: 'Urbanist', sans-serif; ">
-        <div
-            class="container mx-auto flex flex-wrap justify-between lg:justify-center gap-4 px-5 py-1.5 flex-row items-center">
-            <a class="flex title-font font-medium items-center">
-                <img src="./Image/Task4/Logo.png" alt="" class="w-80 py-1">
-            </a>
-            <nav id="nav"
-                class="hidden  md:ml-auto md:mr-auto lg:flex flex-wrap items-center text-lg justify-center text-white uppercase">
-                <a href="/" class="px-3 py-2 hover:text-orange-300 duration-500">Home</a>
-                <a href="/menu" class="px-3 py-2 hover:text-orange-300 duration-500">Menu</a>
-                <a href="/ordernow" class="px-3 py-2 text-orange-300 duration-500 font-bold">Order
-                    Now</a>
-                <a href="/about" class="px-3 py-2 hover:text-orange-300 duration-500">About</a>
-                <a href="/faqs" class="px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
-                <a href="/testimonials"
-                    class="px-3 py-2 hover:text-orange-300 duration-500">Testimonials</a>
-                <a href="/contact"
-                    class="px-3 py-2 hover:text-orange-300 duration-500">Contact</a>
-            </nav>
+  <!-- Navigation Bar -->
+  <header class="bg-gray-900 body-font sticky z-40 tracking-wider px-2 py-1 lg:py-2" style="top: 0%; font-family: 'Urbanist', sans-serif; ">
+    <div class="container mx-auto flex flex-wrap justify-between lg:justify-center gap-4 px-5 py-1.5 flex-row items-center">
+      <a class="flex title-font font-medium items-center">
+        <img src="/assets/Image/Logo.png" alt="" class="w-80 py-1">
+      </a>
+      <nav id="nav" class="hidden  md:ml-auto md:mr-auto lg:flex flex-wrap items-center text-lg justify-center text-white uppercase">
+        <a href="/" class="px-3 py-2 text-orange-300 duration-500 font-bold">Home</a>
+        <a href="/menu" class="px-3 py-2 hover:text-orange-300 duration-500">Menu</a>
+        <a href="/ordernow" class="px-3 py-2 hover:text-orange-300 duration-500">Order
+          Now</a>
+        <a href="/about" class="px-3 py-2 hover:text-orange-300 duration-500">About</a>
+        <a href="/faqs" class="px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
+        <a href="/testimonials" class="px-3 py-2 hover:text-orange-300 duration-500">Testimonials</a>
+        <a href="/contact" class="px-3 py-2 hover:text-orange-300 duration-500">Contact</a>
+      </nav>
 
-            <a href="/bookatable"
-                class="hidden lg:block  items-center bg-gradient-to-r from-orange-400 via-amber-500 to-orange-400 
+      <a href="/bookatable" class="hidden lg:block  items-center bg-gradient-to-r from-orange-400 via-amber-500 to-orange-400 
                         text-white border-0 py-3 px-8 hover:scale-105 duration-500 active:translate-x-2 active:translate-y-2  rounded text-base md:mt-0">BOOK
-                A TABLE
-            </a>
+        A TABLE
+      </a>
 
-            <!-- Humberberg -->
-            <div class="lg:hidden">
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 text-white">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
+      <!-- Humberberg -->
+      <div class="lg:hidden">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
 
-                <!-- Dropdown menu -->
-                <div id="dropdown" class="z-10 hidden bg-gray-100  rounded-lg shadow w-40 mr-4">
-                    <ul id="" class="text-sm font-medium text-gray-800 rounded-lg divide-y divide-gray-300"
-                        aria-labelledby="dropdownDefaultButton">
-                        <a href="/"
-                            class="block px-3 py-2 hover:text-orange-300 duration-500">Home</a>
-                        <a href="/menu"
-                            class="block px-3 py-2  hover:text-orange-300 duration-500">Menu</a>
-                        <a href="/ordernow"
-                            class="block px-3 py-2 text-orange-300 duration-500 font-bold">Order Now</a>
-                        <a href="/about"
-                            class="block px-3 py-2 hover:text-orange-300 duration-500">About</a>
-                        <a href="/faqs"
-                            class="block px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
-                        <a href="/testimonials"
-                            class="block px-3 py-2 hover:text-orange-300 duration-500">Textimonials</a>
-                        <a href="/contact"
-                            class="block px-3 py-2 hover:text-orange-300 duration-500">Contact</a>
-                        <a href="/bookatable"
-                            class="block px-3 py-2 hover:text-orange-300 duration-500">Reserve A Table</a>
-                    </ul>
-                </div>
-            </div>
-            <!-- humberberg End -->
-
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-10 hidden bg-gray-100  rounded-lg shadow w-40 mr-4">
+          <ul id="" class="text-sm font-medium text-gray-800 rounded-lg divide-y divide-gray-300" aria-labelledby="dropdownDefaultButton">
+            <a href="/" class="block px-3 py-2 hover:text-orange-300 duration-500">Home</a>
+            <a href="/menu" class="block px-3 py-2  hover:text-orange-300 duration-500">Menu</a>
+            <a href="/ordernow" class="block px-3 py-2 text-orange-300 duration-500 font-bold">Order Now</a>
+            <a href="/about" class="block px-3 py-2 hover:text-orange-300 duration-500">About</a>
+            <a href="/faqs" class="block px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
+            <a href="/testimonials" class="block px-3 py-2 hover:text-orange-300 duration-500">Textimonials</a>
+            <a href="/contact" class="block px-3 py-2 hover:text-orange-300 duration-500">Contact</a>
+            <a href="/bookatable" class="block px-3 py-2 hover:text-orange-300 duration-500">Reserve A Table</a>
+          </ul>
         </div>
+      </div>
+      <!-- humberberg End -->
 
-    </header>
-    <!-- Navigation Bar End -->
+    </div>
+
+  </header>
+  <!-- Navigation Bar End -->
 
   <!-- Main -->
   <div class="mx-auto bg-transparent" style="font-family: 'Urbanist', sans-serif;">
@@ -253,7 +236,7 @@
 
     <!-- button -->
     <div class="flex justify-center items-center">
-      <a href="./Task4_Resturant_OrderNow.html" class="self-center text-base lg:text-lg mx-6 my-6 hover:scale-105 duration-300 active:translate-x-2 active:translate-y-2 block w-auto px-10 py-3 text-white tracking-wider 
+      <a href="/ordernow" class="self-center text-base lg:text-lg mx-6 my-6 hover:scale-105 duration-300 active:translate-x-2 active:translate-y-2 block w-auto px-10 py-3 text-white tracking-wider 
                 font-semibold bg-gradient-to-b from-orange-400 via-amber-600 to-orange-500">ORDER
         NOW</a>
     </div>
@@ -485,15 +468,13 @@
             <!-- <a href="" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Service</span></a> -->
             <a href="/menu" class="hover:tracking-wider duration-150">&rArr; &nbsp;
               <span>Menu</span></a>
-            <a href="./Task4_Resturant_OrderNow.html" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Order
+            <a href="/ordernow" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Order
                 Now</span></a>
             <a href="/about" class="hover:tracking-wider duration-150">&rArr; &nbsp;
               <span>About</span></a>
-            <a href="./Task4_Resturant_Testimonials.html" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Customer
-                Feedback</span></a>
-            <a href="./Task4_Resturant_BookATable.html" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Reserve A
+            <a href="/bookatable" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Reserve A
                 Table</span></a>
-            <a href="./Task4_Resturant_FAQs.html" class="hover:tracking-wider duration-150">&rArr; &nbsp;
+            <a href="/faqs" class="hover:tracking-wider duration-150">&rArr; &nbsp;
               <span>FAQs</span></a>
           </div>
         </div>
@@ -566,9 +547,9 @@
           </h3>
           <div class="flex flex-col justify-center items-start gap-2 text-white py-3 text-xs md:text-base xl:text-xl" style="font-family: 'Urbanist', sans-serif;">
             <div class="tracking-wider">
-              <p class="py-1 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus fuga rerum
-                expedita deleniti consequuntur delectus?</p>
+              <p class="py-1">
+                Subscribe to our newsletter to receive exclusive updates, special offers, and the latest news from Urban Spice directly in your inbox.
+              </p>
             </div>
           </div>
         </div>
@@ -587,9 +568,6 @@
     </div>
   </footer>
   <!-- Footer End -->
-
-
-
 
 
   <script src="JS/wow.min.js"></script>

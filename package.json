@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start server.js",
+    "build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.css --watch",
     "dev": "nodemon start server.js"
   },
   "repository": {
