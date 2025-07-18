@@ -7,3 +7,4 @@ build/
 
 # NPM package lock (optional - if you're using yarn)
 package-lock.json
+private/
