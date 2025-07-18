@@ -19,6 +19,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json()); // For parsing application/json
+
 
 // Routes
 app.get('/', (req, res) => {
@@ -40,6 +42,15 @@ app.get('/contact', (req, res) => {
 app.get('/ordernow', (req, res) => {
     res.render('ordernow', { menus: menuAll });
 });
+app.use("/payment", require("./routes/payments"));
+
+app.get('/success', (req, res) => {
+    res.render('paymentsuccess'); // this will render views/success.ejs
+});
+app.get('/ordersuccess', (req, res) => {
+    res.render('ordersuccess'); // this will render views/success.ejs
+});
+
 
 app.get('/bookatable', (req, res) => {
     res.render('booktable');

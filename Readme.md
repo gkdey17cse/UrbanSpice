@@ -8,22 +8,28 @@ ROOT/
 ├── public/
 │   ├── css/
 │   │   tailwind.css
-│   │   (your compiled CSS)
+│   │   │── input.css
+│   │   │── tailwind.css
 │   ├── js/
-│   │   (your JS files)
+│   │   │── about.js
+│   │   │── payments.js
+│   │   │── chefDetails.js
+│   │   │── faqs.js
+│   │   │── menuComplete.js
 │   └── assets/
 │       (all images / pdf and others)
 │
 ├── views/
 │   ├── partials/
-│   │   header.ejs
-│   │   footer.ejs
+│   │── header.ejs
+│   │── footer.ejs
 │   ├── about.ejs
 │   ├── menu.ejs
 │   ├── contact.ejs
 │   ├── order.ejs
 │   ├── bookatable.ejs
 │   ├── faqs.ejs
+│   ├── success.ejs
 │   ├── testimonials.ejs
 │   └── index.ejs
 │

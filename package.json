@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "razorpay": "^2.9.6",
+    "router": "^2.2.0"
   }
 }
