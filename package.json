@@ -1,5 +1,32 @@
 {
+  "name": "urbanspice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start server.js",
+    "build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.css --watch",
+    "dev": "nodemon start server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkdey17cse/UrbanSpice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "homepage": "https://github.com/gkdey17cse/UrbanSpice#readme",
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "autoprefixer": "^10.4.21",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "razorpay": "^2.9.6",
+    "router": "^2.2.0"
   }
 }

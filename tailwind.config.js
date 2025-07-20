@@ -1,14 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html",
-    "Task2_Calculator.html",
-    "Task1_ProductLandingPage.html",
-    "Task3_TemparatureConver.html",
-    "Task4_Resturant_Home.html",
-    "Task4_Resturant_BookATable.html",
+  content: [
+    "./views/**/*.ejs",
+    "./public/**/*.js"
+  ],
+  safelist: [
+    'max-h-0',
+    'max-h-[4000px]',
+    'transition-all',
+    'duration-500',
+    'ease-in-out',
+    'rotate-0',
+    'rotate-180'
   ],
   theme: {
     extend: {},
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
   },
   plugins: [],
 }
+

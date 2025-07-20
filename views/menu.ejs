@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Urban Spice : Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/public/css/tailwind.css" rel="stylesheet">
+  <!-- Not for deployment -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Oswald:wght@500&family=Pacifico&family=Poppins:wght@300&family=Raleway&family=Roboto&family=Satisfy&family=Sofia+Sans+Condensed:ital,wght@1,300&family=Urbanist&display=swap" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="CSS/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Owl Caraousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-white">
+
+  <!-- Navigation Bar -->
+  <header class="bg-gray-900 body-font sticky z-40 tracking-wider px-2 py-1 lg:py-2" style="top: 0%; font-family: 'Urbanist', sans-serif; ">
+    <div class="container mx-auto flex flex-wrap justify-between lg:justify-center gap-4 px-5 py-1.5 flex-row items-center">
+      <a class="flex title-font font-medium items-center">
+        <img src="/assets/Image/Logo.png" alt="" class="w-80 py-1">
+      </a>
+      <nav id="nav" class="hidden  md:ml-auto md:mr-auto lg:flex flex-wrap items-center text-lg justify-center text-white uppercase">
+        <a href="/" class="px-3 py-2 hover:text-orange-300 duration-500">Home</a>
+        <a href="/menu" class="px-3 py-2 text-orange-300 duration-500 font-bold">Menu</a>
+        <a href="/ordernow" class="px-3 py-2 hover:text-orange-300 duration-500 ">Order
+          Now</a>
+        <a href="/about" class="px-3 py-2 hover:text-orange-300 duration-500">About</a>
+        <a href="/faqs" class="px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
+        <a href="/testimonials" class="px-3 py-2 hover:text-orange-300 duration-500">Testimonials</a>
+        <a href="/contact" class="px-3 py-2 hover:text-orange-300 duration-500">Contact</a>
+      </nav>
+
+      <a href="/bookatable" class="hidden lg:block  items-center bg-gradient-to-r from-orange-400 via-amber-500 to-orange-400 
+                        text-white border-0 py-3 px-8 hover:scale-105 duration-500 active:translate-x-2 active:translate-y-2  rounded text-base md:mt-0">BOOK
+        A TABLE
+      </a>
+
+      <!-- Humberberg -->
+      <div class="lg:hidden">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-10 hidden bg-gray-100  rounded-lg shadow w-40 mr-4">
+          <ul id="" class="text-sm font-medium text-gray-800 rounded-lg divide-y divide-gray-300" aria-labelledby="dropdownDefaultButton">
+            <a href="/" class="block px-3 py-2 hover:text-orange-300 duration-500">Home</a>
+            <a href="/menu" class="block px-3 py-2  hover:text-orange-300 duration-500">Menu</a>
+            <a href="/ordernow" class="block px-3 py-2 text-orange-300 duration-500 font-bold">Order Now</a>
+            <a href="/about" class="block px-3 py-2 hover:text-orange-300 duration-500">About</a>
+            <a href="/faqs" class="block px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
+            <a href="/testimonials" class="block px-3 py-2 hover:text-orange-300 duration-500">Textimonials</a>
+            <a href="/contact" class="block px-3 py-2 hover:text-orange-300 duration-500">Contact</a>
+            <a href="/bookatable" class="block px-3 py-2 hover:text-orange-300 duration-500">Reserve A Table</a>
+          </ul>
+        </div>
+      </div>
+      <!-- humberberg End -->
+
+    </div>
+
+  </header>
+  <!-- Navigation Bar End -->
+
+  <!-- Carausel section -->
+  <div class="w-full mx-auto -z-10 h-3/4">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="/assets/Image/Banner21.jpg" class="" alt="" style="width: 100%;">
+      </div>
+      <div class="item">
+        <img src="/assets/Image/Banner31.jpg" class="" alt="" style="width: 100%;">
+      </div>
+      <div class="item">
+        <img src="/assets/Image/Banner41.jpg" class="" alt="" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+  <!-- Carousel Section End -->
+
+  <!-- heading Our Menu -->
+  <div class="container mx-auto my-2 py-2">
+    <!-- Heading -->
+    <div class="flex items-center h-auto wow bounceInUp" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
+      <hr class="flex-grow border-t border-orange-400">
+      <span class="px-3 py-3 lg:py-8 text-transparent bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
+                text-3xl lg:text-5xl font-semibold">
+        Our Menu
+      </span>
+      <hr class="flex-grow border-t border-orange-400">
+    </div>
+    <!-- Heading -->
+
+    <p class="text-base lg:text-lg text-center font-medium tracking-wider px-6 py-1" style="font-family: 'Urban', cursive;">Welcome to Urban Spice,
+      where flavors come alive! Explore our diverse menu, ranging from rich Mughlai
+      delicacies to mouthwatering biryanis, delectable pizzas, and a wide array of Indian culinary delights.</p>
+  </div>
+  <!-- heading Our Menu -->
+
+  <!-- Hero Menu  -->
+  <div class="container mx-auto mt-2 px-2 py-3">
+    <div class="grid grid-cols-2 xl:grid-cols-4 gap-6 md:gap-9 px-2 md:px-4 py-3 mt-16 text-xs md:text-base">
+      <!-- Menus -->
+      <% menus.forEach( (menu) => { %>
+      <div data-wow-duration="2s" class="bg-white shadow-xl border-b-2 border-orange-400 flex flex-col justify-center items-center px-3 py-4 text-justify hover:scale-105 duration-300 -mt-8 mb-8 wow animate__fadeInUp" data-wow-delay="1s">
+        <img src="<%= menu.image %>" alt="" class="w-auto p-2 rounded-bl-full">
+        <h3 class="p-1.5 text-base lg:text-lg 2xl:text-xl font-extrabold tracking-wider text-orange-500" style="font-family: 'Raleway', sans-serif;">
+          <%= menu.name %></h3>
+        <p class="px-2 py-2 font-semibold tracking-wide text-gray-600"><%= menu.desc %>
+      </div>
+      <% }); %>
+      <!-- Menus End -->
+    </div>
+  </div>
+  <!-- Hero Menu  -->
+
+  <!-- Menu  -->
+  <div class="container mx-auto bg-white py-4 px-3">
+    <div class=" mx-auto px-2 py-2 my-4 lg:my-8" style="font-family: 'Fira Sans', sans-serif;">
+      <!-- Heading -->
+      <div class="flex items-center h-auto wow fadeInDown" style="font-family: 'Satisfy', cursive;">
+        <span class="px-3 py-8 text-transparent bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
+                    text-3xl lg:text-5xl font-semibold">
+          Explore All Catagories
+        </span>
+        <hr class="flex-grow border-t border-orange-400">
+      </div>
+
+
+      <div class=" mx-auto px-1 md:px-4 py-3 mt-4 ">
+
+        <!-- Buttons -->
+        <div class="grid grid-cols-4 2xl:grid-cols-8 gap-3 px-4 py-3 text-xs md:text-sm lg:text-base 2xl:text-xl">
+          <% mealTypes.forEach(function(type, idx) { %>
+          <button id="btn<%= idx+1 %>" onclick="showMeal('<%= type %>');" class="wow fadeInLeftBig flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-4 border-b-orange-400 shadow-md 
+                            active:translate-x-2 active:translate-y-2 hover:shadow-xl duration-100">
+            <div class="flex justify-center items-center">
+              <img src="<%= menuData[type][0].image %>" alt="" class="w-20">
+            </div>
+            <div class="flex flex-col justify-center items-center text-center">
+              <h2 class="font-bold tracking-wider text-sm md:text-base 2xl:text-xl" style="font-family: 'Urbanist', sans-serif;"><%= type.charAt(0).toUpperCase() + type.slice(1) %></h2>
+              <h3 class="tracking-wide font-medium"><%= menuData[type][0].name.split(' ')[1] || '' %></h3>
+            </div>
+          </button>
+          <% }); %>
+        </div>
+        <!-- Buttons End -->
+        <!-- Menu Type wise -->
+        <% mealTypes.forEach(function(type) { %>
+        <div id="<%= type %>" class="mt-8 py-2 px-3 grid lg:grid-cols-2 gap-4" style="display: none;">
+          <% menuData[type].forEach(function(item) { %>
+          <div class="grid grid-cols-6 gap-3 px-4 py-2 shadow-md duration-300 hover:shadow-xl rounded-lg bg-amber-50 wow bounceInUp">
+            <div class="flex justify-center items-center">
+              <img src="<%= item.image %>" alt="" class="w-20 h-20 object-cover rounded-full border-2 border-orange-300">
+            </div>
+            <div class="col-span-5 flex flex-col justify-center gap-1.5 px-2 py-1">
+              <div class="flex justify-between items-center">
+                <h3 class="lg:text-xl font-semibold tracking-wide text-gray-900"><%= item.name %></h3>
+                <h2 class="text-orange-400 font-semibold lg:text-xl">₹ <%= item.price %></h2>
+              </div>
+              <hr class="flex-grow border-t border-gray-300 my-1">
+              <p class="text-gray-600 text-sm"><%= item.desc %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <% }); %>
+        <!-- Menu type wise end -->
+      </div>
+    </div>
+    <!-- Menu End -->
+  </div>
+  <!-- Online Order -->
+  <div class="container mx-auto mb-12 px-2 py-2" style="font-family:'Urbanist', sans-serif; ;">
+    <div class="lg:flex justify-center items-center gap-2 text-center tracking-widest font-semibold leading-loose">
+      <div class="flex justify-center items-center ">
+        <img src="/assets/Image/OnlineDeliver.jpg" alt="">
+      </div>
+      <div class="flex flex-col gap-6 justify-center items-center">
+        <h3 class="text-lg md:text-xl xl:text-2xl">
+          Enjoy the flavors of 'Urban Spice' from the comfort of your home. We deliver culinary excellence to
+          your doorstep!
+        </h3>
+        <h1 class="text-lg md:text-xl xl:text-2xl ">Call : <br><br>
+          <span class="text-2xl lg:text-4xl font-bold">(+91) 1800 365 1369 8745</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <!-- Online Order -->
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8" style="font-family: 'Satisfy', cursive;">
+    <div class="container mx-auto px-2 py-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-2 py-3">
+        <!-- Company -->
+        <div class="px-2 py-1 ">
+          <h3 class="text-2xl font-semibold tracking-wider text-orange-400 py-1">Company ____</h3>
+          <div class="flex flex-col justify-center items-start gap-3 text-white py-3 text-xs md:text-base xl:text-xl" style="font-family: 'Urbanist', sans-serif;">
+            <!-- <a href="" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Service</span></a> -->
+            <a href="/menu" class="hover:tracking-wider duration-150">&rArr; &nbsp;
+              <span>Menu</span></a>
+            <a href="/ordernow" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Order
+                Now</span></a>
+            <a href="/about" class="hover:tracking-wider duration-150">&rArr; &nbsp;
+              <span>About</span></a>
+            <a href="/bookatable" class="hover:tracking-wider duration-150">&rArr; &nbsp; <span>Reserve A
+                Table</span></a>
+            <a href="/faqs" class="hover:tracking-wider duration-150">&rArr; &nbsp;
+              <span>FAQs</span></a>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="px-2 py-1 ">
+          <h3 class="text-2xl font-semibold tracking-wider text-orange-400 py-1">Contact ____</h3>
+
+          <div class="flex flex-col justify-center items-start gap-3 text-white py-3 text-xs md:text-base xl:text-lg" style="font-family: 'Urbanist', sans-serif;">
+            <div class="flex justify-start items-center gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <p>Jasidih Station Rd, Jharkhand , 814142</p>
+            </div>
+            <div class="flex justify-start items-center gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              <p>(+91) &nbsp; 1800 255 369 1588</p>
+            </div>
+            <div class="flex justify-start items-center gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <p>urbanspice123654@hotmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center gap-6 py-4">
+
+            <a href="#" class="inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal bg-transparent border-2 border-white hover:bg-orange-500 text-white shadow-md transition duration-150">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+              </svg>
+            </a>
+            <a href="#" class="inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal bg-transparent border-2 border-white hover:bg-orange-500 text-white shadow-md transition duration-150">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="#" class="inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal bg-transparent border-2 border-white hover:bg-orange-500 text-white shadow-md transition duration-150">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Opening -->
+        <div class="px-2 py-1 ">
+          <h3 class="text-2xl font-semibold tracking-wider text-orange-400 py-1">Opening ____</h3>
+          <div class="flex flex-col justify-center items-start gap-2 text-white py-3 text-xs md:text-base xl:text-lg" style="font-family: 'Urbanist', sans-serif;">
+            <div class="tracking-wider">
+              <h3 class="py-1 font-semibold">MONDAY - SATURDAY</h3>
+              <p class="py-1">9.00 A.M - 11.00 P.M</p>
+            </div>
+            <div class="tracking-wider">
+              <h3 class="py-1 font-semibold">SUNDAY</h3>
+              <p class="py-1">10.00 A.M - 10.00 P.M</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Opening -->
+        <div class="px-2 py-1 ">
+          <h3 class="text-2xl font-semibold tracking-wider text-orange-400 py-1">Newsletter ____
+          </h3>
+          <div class="flex flex-col justify-center items-start gap-2 text-white py-3 text-xs md:text-base xl:text-xl" style="font-family: 'Urbanist', sans-serif;">
+            <div class="tracking-wider">
+              <p class="py-1">
+                Subscribe to our newsletter to receive exclusive updates, special offers, and the latest news from Urban Spice directly in your inbox.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Heading -->
+      <div class="flex flex-col items-center h-auto mt-2 flex-grow border-t-2 border-orange-400" style="font-family: 'Urbanist', cursive;">
+        <div class="flex flex-col lg:flex-row mt-2 mx-3 pt-2 tracking-wider gap-2 lg:gap-12 justify-center lg:justify-between items-center text-gray-200 text-xs md:text-base xl:text-xl">
+          <p>@ Copyright <strong>URBAN SPICE</strong> &copy; <%= new Date().getFullYear() %> All Rights Reserved</p>
+          <p>Designed by <span class="text-orange-400">GOUR KRISHNA DEY</span></p>
+        </div>
+      </div>
+      <!-- Heading -->
+
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <script src="JS/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Flowbite -->
+  <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Owl Carousel .js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+      }
+    });
+  </script>
+
+  <script>
+    function showMeal(mealtype) {
+      const types = ["biriyani", "mughlai", "pizza", "indian", "chinese", "vegetarian", "grill", "desert"];
+      types.forEach(function(type, idx) {
+        const el = document.getElementById(type);
+        if (el) el.style.display = (type === mealtype) ? 'grid' : 'none';
+        const btn = document.getElementById('btn' + (idx + 1));
+        if (btn) {
+          if (type === mealtype) btn.classList.add('border-b-4');
+          else btn.classList.remove('border-b-4');
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      showMeal('biriyani');
+    });
+  </script>
+
+</body>
+
+</html>
