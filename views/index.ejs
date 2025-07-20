@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Urban Spice : Home</title>
+  <link rel="icon" type="image/png" href="/assets/Image/Bg_Chef.png" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/public/css/tailwind.css" rel="stylesheet">
   <!-- Not for deployment -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,9 +17,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Oswald:wght@500&family=Pacifico&family=Poppins:wght@300&family=Raleway&family=Roboto&family=Satisfy&family=Sofia+Sans+Condensed:ital,wght@1,300&family=Urbanist&display=swap" rel="stylesheet">
+
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="CSS/animate.css">
+  <link rel="stylesheet" href="/public/css/animate.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
   <!-- Owl Caraousel -->
@@ -33,7 +35,7 @@
   <header class="bg-gray-900 body-font sticky z-40 tracking-wider px-2 py-1 lg:py-2" style="top: 0%; font-family: 'Urbanist', sans-serif; ">
     <div class="container mx-auto flex flex-wrap justify-between lg:justify-center gap-4 px-5 py-1.5 flex-row items-center">
       <a class="flex title-font font-medium items-center">
-        <img src="/assets/Image/Logo.png" alt="" class="w-80 py-1">
+        <img src="/assets/Image/Logo.png" alt="" class="w-60 lg:w-80 py-1">
       </a>
       <nav id="nav" class="hidden  md:ml-auto md:mr-auto lg:flex flex-wrap items-center text-lg justify-center text-white uppercase">
         <a href="/" class="px-3 py-2 text-orange-300 duration-500 font-bold">Home</a>
@@ -62,9 +64,9 @@
         <!-- Dropdown menu -->
         <div id="dropdown" class="z-10 hidden bg-gray-100  rounded-lg shadow w-40 mr-4">
           <ul id="" class="text-sm font-medium text-gray-800 rounded-lg divide-y divide-gray-300" aria-labelledby="dropdownDefaultButton">
-            <a href="/" class="block px-3 py-2 hover:text-orange-300 duration-500">Home</a>
+            <a href="/" class="block px-3 py-2 text-orange-300 duration-500 font-bold">Home</a>
             <a href="/menu" class="block px-3 py-2  hover:text-orange-300 duration-500">Menu</a>
-            <a href="/ordernow" class="block px-3 py-2 text-orange-300 duration-500 font-bold">Order Now</a>
+            <a href="/ordernow" class="block px-3 py-2 hover:text-orange-300 duration-500 ">Order Now</a>
             <a href="/about" class="block px-3 py-2 hover:text-orange-300 duration-500">About</a>
             <a href="/faqs" class="block px-3 py-2 hover:text-orange-300 duration-500">FAQs</a>
             <a href="/testimonials" class="block px-3 py-2 hover:text-orange-300 duration-500">Textimonials</a>
@@ -119,7 +121,7 @@
   <div class="bg-gray-100 py-20">
     <div class="container mx-auto px-2 py-2 my-4 lg:my-16" style="font-family: 'Fira Sans', sans-serif;">
       <!-- Heading -->
-      <div class="flex items-center h-auto wow bounceInUp" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
+      <div class="flex items-center h-auto wow animate__animated animate__bounceInUp" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
         <span class="px-3 py-8 text-transparent bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
                     text-3xl lg:text-5xl font-semibold">
           What We Offers
@@ -151,7 +153,7 @@
   <div class="bg-white py-20">
     <div class="container mx-auto px-2 py-2 my-4 lg:my-8" style="font-family: 'Fira Sans', sans-serif;">
       <!-- Heading -->
-      <div class="flex items-center h-auto wow fadeInDown" style="font-family: 'Satisfy', cursive;">
+      <div class="flex items-center h-auto wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s" style="font-family: 'Satisfy', cursive;">
         <!-- <hr class="flex-grow border-t border-orange-400"> -->
         <span class="px-3 py-8 text-transparent bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
                     text-3xl lg:text-5xl font-semibold">
@@ -167,7 +169,7 @@
         <!-- Buttons -->
         <div class="tabs flex justify-center items-center gap-3 px-4 lg:py-3">
           <!-- Breakfast -->
-          <button id="btn1" onclick="showMeal('breakfast');" class="wow fadeInLeftBig flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-4 border-b-orange-400 shadow-md 
+          <button id="btn1" onclick="showMeal('breakfast');" data-wow-duration="1s" class="wow animate_animated animate__fadeInLeftBig flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-4 border-b-orange-400 shadow-md 
                         active:translate-x-2 active:translate-y-2 hover:shadow-xl duration-100">
             <div class="flex justify-center items-center">
               <img src="/assets/Image/Menu_breakfast.png" alt="" class="w-20">
@@ -180,7 +182,7 @@
           </button>
           <!-- Breakfast -->
           <!-- Lunch -->
-          <button id="btn2" onclick="showMeal('lunch');" class="wow bounceInDown flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-orange-400 shadow-md 
+          <button id="btn2" onclick="showMeal('lunch');" data-wow-duration="1s" class="wow animate__animated animate__bounceInDown flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-orange-400 shadow-md 
                         active:translate-x-2 active:translate-y-2 hover:shadow-xl duration-100">
             <div class="flex justify-center items-center">
               <img src="/assets/Image/Menu_lunch.png" alt="" class="w-20">
@@ -193,7 +195,7 @@
           </button>
           <!-- Lunch -->
           <!-- Dinner -->
-          <button id="btn3" onclick="showMeal('dinner');" class="wow fadeInRightBig flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-orange-400 shadow-md 
+          <button id="btn3" onclick="showMeal('dinner');" data-wow-duration="1s" class="wow animate_animated animate__fadeInRightBig flex flex-col lg:flex-row items-center justify-center px-4 py-3 gap-3 border-b-orange-400 shadow-md 
                         active:translate-x-2 active:translate-y-2 hover:shadow-xl duration-100">
             <div class="flex justify-center items-center">
               <img src="/assets/Image/Menu_dinner.png" alt="" class="w-20">
@@ -211,9 +213,9 @@
 
         <!-- For each mealtype -->
         <% Object.keys(menu).forEach(function(mealtype) { %>
-        <div id="<%= mealtype %>" class="mt-8 py-2 px-3 grid lg:grid-cols-2 gap-4" style="font-family: 'Urbanist', sans-serif; display: none;">
+        <div id="<%= mealtype %>" data-wow-duration="1s" class="wow animate__animated animate__bounceInUp mt-8 py-2 px-3 grid lg:grid-cols-2 gap-4" style="font-family: 'Urbanist', sans-serif; display: none;">
           <% menu[mealtype].forEach(function(item) { %>
-          <div class="grid grid-cols-6 gap-3 px-4 py-2 shadow-md duration-300 hover:shadow-xl rounded-lg bg-amber-50 wow bounceInUp">
+          <div class="grid grid-cols-6 gap-3 px-4 py-2 shadow-md duration-300 hover:shadow-xl rounded-lg bg-amber-50 wow animate__animated animate__bounceInUp">
             <div class="flex justify-center items-center">
               <img src="<%= item.image %>" alt="" class="w-20">
             </div>
@@ -292,18 +294,18 @@
 
             <div class="shadow-2xl px-4 py-3 gap-4 flex flex-col justify-center items-center border-l-4 border-orange-400">
               <h2 class="text-transparent bg-clip-text bg-gradient from-orange-300 via-amber-500 to bg-orange-300 
-                                font-bold text-2xl px-3 md:text-5xl tracking-wider">15</h2>
-              <h3 class="text-base md:text-xl font-medium tracking-wider text-center">Years of <span class="font-bold">Experience</span></h3>
+                                font-bold text-xl px-3 md:text-2xl tracking-wider">15</h2>
+              <h3 class="text-sm md:text-lg font-medium tracking-wider text-center">Years of <span class="font-bold">Experience</span></h3>
             </div>
             <div class="shadow-2xl px-4 py-3 gap-4 flex flex-col justify-center items-center border-l-4 border-orange-400">
               <h2 class="text-transparent bg-clip-text bg-gradient-to-b from-orange-300 via-amber-500 to bg-orange-300 
-                                font-bold text-2xl px-3 md:text-5xl tracking-wider">60+</h2>
-              <h3 class="text-base md:text-xl font-medium tracking-wider text-center">Experienced <span class="font-bold">Chef</span></h3>
+                                font-bold text-xl px-3 md:text-2xl tracking-wider">60+</h2>
+              <h3 class="text-sm md:text-lg font-medium tracking-wider text-center">Experienced <span class="font-bold">Chef</span></h3>
             </div>
             <div class="shadow-2xl px-4 py-3 gap-4 flex flex-col justify-center items-center border-l-4 border-orange-400">
               <h2 class="text-transparent bg-clip-text bg-gradient from-orange-300 via-amber-500 to bg-orange-300 
-                                font-bold text-2xl px-3 md:text-5xl tracking-wider">15000+</h2>
-              <h3 class="text-base md:text-xl font-medium tracking-wider text-center">Online <span class="font-bold">Delivery</span></h3>
+                                font-bold text-xl px-3 md:text-2xl tracking-wider">15000+</h2>
+              <h3 class="text-sm md:text-lg font-medium tracking-wider text-center">Online <span class="font-bold">Delivery</span></h3>
             </div>
 
           </div>
@@ -333,7 +335,7 @@
     <!-- Heading -->
 
     <!-- First Blog -->
-    <div class="flex flex-col justify-center items-center md:flex-row lg:grid grid-cols-4 px-3 py-3 text-xs xl:text-base tracking-wide wow bounceInUp
+    <div class="flex flex-col justify-center items-center md:flex-row lg:grid grid-cols-4 px-3 py-3 text-xs xl:text-base tracking-wide wow animate__animated animate__bounceInUp
                 font-medium leading-relaxed lg:leading-loose">
       <div class="col-span-3 px-4 py-2 flex flex-col gap-3 justify-center items-start">
         <h2 class="text-base lg:text-2xl 2xl:text-3xl font-semibold">The Street Food Extravaganza: A Taste of India's Streets
@@ -366,7 +368,7 @@
     </div>
     <!-- First Blog -->
     <!-- second Blog -->
-    <div class="flex flex-col justify-center items-center md:flex-row lg:grid grid-cols-4 px-3 py-3 text-xs xl:text-base tracking-wide wow bounceInUp
+    <div class="flex flex-col justify-center items-center md:flex-row lg:grid grid-cols-4 px-3 py-3 text-xs xl:text-base tracking-wide wow animate__animated animate__bounceInUp
         font-medium leading-relaxed lg:leading-loose">
       <div class="flex justify-center items-center p-4">
         <img src=".//assets/Image/Blog1.jpg" alt="" class="w-auto m-2.5 rounded-lg shadow-lg xl:rounded-tl-full">
@@ -570,62 +572,61 @@
   <!-- Footer End -->
 
 
-  <script src="JS/wow.min.js"></script>
-  <script>
+<!-- jQuery (must come first) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- WOW.js from CDN (recommended over local) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<!-- Flowbite, OwlCarousel, etc. -->
+<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Initialize WOW once -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     new WOW().init();
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Flowbite -->
-  <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  });
+</script>
 
-  <!-- Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Owl Carousel .js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- Owl Carousel Init -->
   <script>
-    var owl = $('.owl-carousel');
-    owl.owlCarousel({
-      items: 4,
-      loop: true,
-      margin: 10,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      autoplayHoverPause: true,
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        1100: {
-          items: 3
-        },
-        1400: {
-          items: 4
+    $(document).ready(function() {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        margin: 16,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          640: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          },
+          1280: {
+            items: 4
+          }
         }
-      }
+      });
     });
-    $('.play').on('click', function() {
-      owl.trigger('play.owl.autoplay', [1000])
-    })
-    $('.stop').on('click', function() {
-      owl.trigger('stop.owl.autoplay')
-    })
   </script>
 
+  <!-- Meal Button Script -->
   <script>
     function showMeal(mealtype) {
-      // Show/hide menu sections
       ['breakfast', 'lunch', 'dinner'].forEach(function(type) {
         var el = document.getElementById(type);
         if (el) el.style.display = (type === mealtype) ? 'grid' : 'none';
       });
 
-      // Update button UI
-      ['btn1', 'btn2', 'btn3'].forEach(function(btn, idx) {
+      ['btn1', 'btn2', 'btn3'].forEach(function(btn) {
         var button = document.getElementById(btn);
         if (button) {
           if ((mealtype === 'breakfast' && btn === 'btn1') ||
@@ -639,11 +640,11 @@
       });
     }
 
-    // Show breakfast by default
     document.addEventListener('DOMContentLoaded', function() {
       showMeal('breakfast');
     });
   </script>
+
 
 </body>
 
